@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tic-Tac-Toe by MPST ROY</title>
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
   <h1>Tic-Tac-Toe by MPST ROY</h1>
+
   <div id="playerInput">
-    <input type="text" id="player1" placeholder="Player 1 Name (X)" required>
-    <input type="text" id="player2" placeholder="Player 2 Name (O)" required>
+    <input type="text" id="player1" placeholder="Player 1 Name (X)" required />
+    <input type="text" id="player2" placeholder="Player 2 Name (O)" required />
     <button onclick="startGame()">Start Game</button>
   </div>
+
   <div id="gameContainer" style="display: none;">
+    <div id="scoreBoard">
+      <p><span id="nameX">X</span>: <span id="scoreX">0</span></p>
+      <p><span id="nameO">O</span>: <span id="scoreO">0</span></p>
+      <p>Draws: <span id="draws">0</span></p>
+    </div>
     <div id="gameBoard"></div>
     <div id="result"></div>
-    <button id="restart" onclick="restartGame()" style="display: none;">Restart Game</button>
+    <button id="restart" onclick="restartGame()">Restart Game</button>
   </div>
-  <script src="./script.js">
-  
-  </script>
+
+  <script src="./script.js"></script>
 </body>
 </html>
